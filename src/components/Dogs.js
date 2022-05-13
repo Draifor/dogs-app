@@ -10,11 +10,10 @@ function Dogs() {
     return <div>Error al cargar</div>;
   }
   if (isLoading) return <div>Cargando</div>;
-  console.table(data);
 
   return (
     <div>
-        <Card data={data} />
+      <Card data={data} />
     </div>
   );
 }

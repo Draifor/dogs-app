@@ -1,19 +1,19 @@
-import './App.css';
-import ReloadButton from './components/Button/ReloadButton';
-import Dogs from './components/Dogs';
-import HeaderComponent from './components/HeaderComponent';
+import "./App.css";
+import ReloadButton from "./components/Button/ReloadButton";
+import Dogs from "./components/Dogs";
+import Header from "./components/Header/Header";
 
 function App() {
   return (
     <div className="App">
       <div className="container">
-        <HeaderComponent />
+        <Header />
         <main>
-          <div className='cards-list'>
+          <div className="cards-list">
             <Dogs />
             <Dogs />
           </div>
-          <ReloadButton/>
+          <ReloadButton />
         </main>
       </div>
     </div>
