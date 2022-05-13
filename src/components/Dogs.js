@@ -1,20 +1,22 @@
-import useSWR from 'swr';
-import React from 'react';
-
-const URL = "https://api.thedogapi.com/v1/images/search";
-const fetcher = (...args) => fetch(...args).then(res => res.json());
+import React from "react";
+import useDogsApi from "../hooks/useDogsApi";
+import Card from "./Card/Card";
 
 function Dogs() {
-    const { data, error } = useSWR(URL, fetcher);
+  const id = Math.round(Math.random() * 100);
+  const { data, isLoading, isError } = useDogsApi(id);
+  if (isError) {
+    console.log(isError);
+    return <div>Error al cargar</div>;
+  }
+  if (isLoading) return <div>Cargando</div>;
+  console.table(data);
 
-    console.table(data);
-    console.log(error);
-    if (error) return <div>Error al cargar</div>;
-    if (!data) return <div>Cargando</div>;
-
-    return (
-        <div><img src={data[0].url} key={data[0].id} alt="" /></div>
-    );
+  return (
+    <div>
+        <Card data={data} />
+    </div>
+  );
 }
 
 export default Dogs;

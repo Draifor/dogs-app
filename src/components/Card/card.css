@@ -1,0 +1,23 @@
+.card {
+    max-width: fit-content;
+}
+img {
+    max-height: 50vh;
+    max-width: 50vw;
+    border-radius: 20px;
+}
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+i{
+    color: #000;
+    text-shadow: 0 0 10px #fff, 0 0 10px #fff, 0 0 10px #fff;
+    font-style: normal;
+    font-weight: 600;
+}
+.error {
+    height: 200px;
+}

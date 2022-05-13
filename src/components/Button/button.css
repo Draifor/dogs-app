@@ -1,0 +1,20 @@
+button {
+    font-size: calc(10px + 2vmin);
+    color: #fff;
+    border-radius: 15px;
+    padding: 5px 15px 5px;
+    margin: 10px;
+    background-color: #000;
+    border: 2px solid #fff;
+    box-shadow: 0 0 10px;
+}
+button:hover {
+    background-color: rgb(250, 250, 250);
+    color: #000;
+    border: 2px solid #000;
+    box-shadow: 0 0 10px;
+}
+button:active {
+    transform: scale(.9);
+
+}
